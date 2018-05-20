@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import { Table, Label, Button, Image, Modal, Confirm } from 'semantic-ui-react';
-import EditCategory from '../forms/EditCategory';
+import { Table, Button, Image, Modal } from 'semantic-ui-react';
+import EditBlog from '../forms/EditBlog';
 import ConfirmDelete from "../forms/DeleteConfirm";
 
 class BlogsList extends Component {
@@ -28,7 +28,7 @@ class BlogsList extends Component {
 							<Table.Cell>
 								{blog.title}
 							</Table.Cell>
-							<Table.Cell><Image src={blog.imageUrl}/></Table.Cell>
+							<Table.Cell>{/*<Image src={blog.imageUrl}/>*/}</Table.Cell>
 							<Table.Cell>{blog.content}</Table.Cell>
 							<Table.Cell>
 								<Modal
@@ -38,14 +38,15 @@ class BlogsList extends Component {
 										icon={'edit'}/>}>
 									<Modal.Header>Edit a blog</Modal.Header>
 									<Modal.Content>
-										{/*<EditCategory
+										<EditBlog
 											blog={blog}
-											edit={this.props.edit.bind(this)}/>*/}
+											edit={this.props.edit.bind(this)}/>
 									</Modal.Content>
 								</Modal>
-								{/*<ConfirmDelete
+								<ConfirmDelete
 									blog={blog}
-									remove={this.props.remove.bind(this)}/>*/}
+									type={'blog'}
+									remove={this.props.remove.bind(this)}/>
 							</Table.Cell>
 						</Table.Row>
 					})}

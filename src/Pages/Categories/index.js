@@ -84,6 +84,7 @@ class Categories extends Component {
 				<Header as={'h3'} color={'teal'}>List of categories</Header>
 				<CategoryiesList
 					categories={categories}
+					type={'category'}
 					edit={this.edit}
 				remove={this.remove}/>
 			</div>
