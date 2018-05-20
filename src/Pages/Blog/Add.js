@@ -26,7 +26,7 @@ class AddBlog extends Component {
 		const options = [ ...this.props.categories.map( category => ( { text: category.name, value: category._id }))];
 		return (
 			<div>
-				<h3>Add blog form goes here</h3>
+				<h3>Paint on this form :)</h3>
 				<Form onSubmit={this.submit}>
 					<Form.Input
 					fluid={true}
@@ -69,8 +69,7 @@ class AddBlog extends Component {
 }
 
 const mapStateToProps = state => ({
-	categories: state.categories,
-	blogs: state.blogs
+	categories: state.categories
 });
 
 export default connect(mapStateToProps, { add })(AddBlog);

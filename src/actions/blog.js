@@ -8,6 +8,10 @@ export const add = blog => dispatch => axios.post(`${base}/add`, {blog}).then( r
 		type: types.BLOG_ADDED,
 		payload: response.data.blog
 	});
+	dispatch({
+		type: types.CATEGORY_EDITED,
+		payload: response.data.category
+	});
 });
 
 export const fetch = () => dispatch => axios.get(`${base}/list`).then( response => {
