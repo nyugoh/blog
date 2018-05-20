@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Main from "./menus/Main";
 import Footer from "./menus/Footer";
 import Blogs from './Pages/Blog';
+import Categories from './Pages/Categories';
 
 class App extends Component {
   render() {
@@ -12,7 +13,7 @@ class App extends Component {
 		<Switch>
 		  <Route path='/' exact component={Home}/>
 		  <Route path='/blogs' component={Blogs}/>
-		  <Route path='/message'/>
+		  <Route path='/categories' component={Categories}/>
 		  <Route path='/stats'/>
 		</Switch>
 		<Footer/>

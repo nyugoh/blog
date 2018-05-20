@@ -1,11 +1,10 @@
-* {
-	box-sizing: border-box;
+.visible.transition {
+	margin-top: auto !important;
+	display: inline-block !important;
+	position: relative;
+	top: 20%;
+	left:10%;
 }
-#content {
-	width: 480px;
-	margin: 0 auto;
-}
-.editor {
-	border: 1px solid grey;
-	padding: 10px;
+.ui.dimmer {
+	background-color: rgba(0, 0, 0, 0.5) !important;
 }

@@ -1,1 +1,5 @@
 export const BLOG_ADDED = 'BLOG_ADDED';
+
+export const CATEGORY_ADDED = 'CATEGORY_ADDED';
+
+export const CATEGORY_FETCHED = 'CATEGORY_FETCHED';
