@@ -1,16 +1,19 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
-
+import { connect } from 'react-redux';
+import BlogTable from '../../Tables/BlogList';
 class BlogList extends Component {
 	render() {
 		return (
 			<div>
 				<h3>Blog listing</h3>
+				<BlogTable blogs={this.props.blogs}/>
 			</div>
 		);
 	}
 }
 
-BlogList.propTypes = {};
+const mapStateToProps = state => ({
+	blogs: state.blogs
+});
 
-export default BlogList;
+export default connect(mapStateToProps)(BlogList);

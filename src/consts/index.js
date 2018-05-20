@@ -6,6 +6,12 @@ export const CATEGORY_ADDED = 'CATEGORY_ADDED';
 
 export const CATEGORY_FETCHED = 'CATEGORY_FETCHED';
 
+export const BLOG_FETCHED = 'BLOG_FETCHED';
+
 export const CATEGORY_EDITED = 'CATEGORY_EDITED';
 
+export const BLOG_EDITED = 'BLOG_EDITED';
+
 export const CATEGORY_DELETED = 'CATEGORY_DELETED';
+
+export const BLOG_DELETED = 'BLOG_DELETED';

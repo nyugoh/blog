@@ -5,8 +5,12 @@ const blogs = (state = [], action = {}) => {
 	switch (type) {
 		case types.BLOG_ADDED:
 			return [ ...state, payload ];
-		case types.BLOGS_FETCHED:
-			return payload;
+		case types.BLOG_FETCHED:
+			return [ ...payload ];
+		case types.BLOG_EDITED:
+			return state.map( item => item._id === payload._id?payload:item);
+		case types.BLOG_DELETED:
+			return state.filter( item => item._id !== payload);
 		default:
 			return state;
 	}
