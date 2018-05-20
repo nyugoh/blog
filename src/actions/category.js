@@ -16,3 +16,17 @@ export const fetch = skill => dispatch => axios.get(`${base}/list`).then( respon
 		payload: response.data.categories
 	});
 });
+
+export const edit = skill => dispatch => axios.put(`${base}/edit`, {skill}).then( response => {
+	dispatch({
+		type: types.CATEGORY_EDITED,
+		payload: response.data.category
+	});
+});
+
+export const remove = id => dispatch => axios.delete(`${base}/delete/${id}`).then( response => {
+	dispatch({
+		type: types.CATEGORY_DELETED,
+		payload: response.data.id
+	});
+});
