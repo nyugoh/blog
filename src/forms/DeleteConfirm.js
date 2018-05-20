@@ -18,6 +18,8 @@ class ConfirmDelete extends Component {
 		return (
 			<div>
 				<Button
+					inverted={true}
+					floated={'left'}
 					color={'red'}
 					icon={'trash'}
 					onClick={this.show.bind(this)}/>

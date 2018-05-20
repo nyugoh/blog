@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Table, Button, Image, Modal } from 'semantic-ui-react';
+import { Table, Button, Image, Modal, Label } from 'semantic-ui-react';
 import EditBlog from '../forms/EditBlog';
 import ConfirmDelete from "../forms/DeleteConfirm";
 
@@ -26,6 +26,8 @@ class BlogsList extends Component {
 					{blogs.map( (blog, index) => {
 						return <Table.Row key={index}>
 							<Table.Cell>
+								{blog.status === 0 && <Label ribbon color={'orange'}>Archived</Label>}
+								{blog.status === 1 && <Label ribbon color={'teal'}>Published</Label>}
 								{blog.title}
 							</Table.Cell>
 							<Table.Cell>{/*<Image src={blog.imageUrl}/>*/}</Table.Cell>
@@ -35,6 +37,8 @@ class BlogsList extends Component {
 									size={'tiny'}
 									trigger={<Button
 										positive
+										inverted={true}
+										floated={'left'}
 										icon={'edit'}/>}>
 									<Modal.Header>Edit a blog</Modal.Header>
 									<Modal.Content>
@@ -47,6 +51,12 @@ class BlogsList extends Component {
 									blog={blog}
 									type={'blog'}
 									remove={this.props.remove.bind(this)}/>
+								<Button
+									inverted={true}
+									floated={'left'}
+									color={'teal'}
+									icon={'archive'}
+									onClick={this.props.archive.bind(this, blog._id)}/>
 							</Table.Cell>
 						</Table.Row>
 					})}

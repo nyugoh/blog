@@ -34,3 +34,10 @@ export const remove = id => dispatch => axios.delete(`${base}/delete/${id}`).the
 		payload: response.data.id
 	});
 });
+
+export const archive = id => dispatch => axios.put(`${base}/archive/${id}`).then( response => {
+	dispatch({
+		type: types.BLOG_EDITED,
+		payload: response.data.blog
+	});
+});

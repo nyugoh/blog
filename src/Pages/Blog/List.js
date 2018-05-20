@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import BlogTable from '../../Tables/BlogList';
-import { edit, remove } from '../../actions/blog';
+import { edit, remove, archive } from '../../actions/blog';
 
 class BlogList extends Component {
 	edit = (data) =>{
@@ -14,8 +14,16 @@ class BlogList extends Component {
 		});
 	};
 
+	archive = (id) =>{
+		this.props.archive(id).then( () =>{
+			alert('archived ....!!!');
+		}).catch( error =>{
+			alert(error.message);
+		});
+	};
+
 	remove = (id) =>{
-		this.props.remove(id).then( response =>{
+		this.props.remove(id).then( () =>{
 			alert('Deleted....!!!');
 		}).catch( error =>{
 			alert(error.message);
@@ -29,7 +37,8 @@ class BlogList extends Component {
 				<BlogTable
 					blogs={this.props.blogs}
 					remove={this.remove}
-					edit={this.edit}/>
+					edit={this.edit}
+					archive={this.archive}/>
 			</div>
 		);
 	}
@@ -39,4 +48,4 @@ const mapStateToProps = state => ({
 	blogs: state.blogs
 });
 
-export default connect(mapStateToProps, { edit, remove })(BlogList);
+export default connect(mapStateToProps, { edit, remove, archive })(BlogList);
