@@ -20,7 +20,10 @@ class AddBlog extends Component {
 
 	handleChange = e => { this.setState({ data: { ...this.state.data, [e.target.name]: e.target.value } }); };
 
+	handleSelect = (e, data) => { this.setState({ data: { ...this.state.data, [data.name]: data.value } }); };
+
 	render() {
+		const options = [ ...this.props.categories.map( category => ( { text: category.name, value: category._id }))];
 		return (
 			<div>
 				<h3>Add blog form goes here</h3>
@@ -51,6 +54,13 @@ class AddBlog extends Component {
 						placeholder={'Image caption, credit'}
 						label={'Image caption'}
 						onChange={this.handleChange}/>
+					<Form.Select
+						fluid={true}
+						label='Category'
+						options={options}
+						placeholder='Category'
+						name={'category'}
+						onChange={this.handleSelect}/>
 					<Form.Button social={'twitter'}>Submit</Form.Button>
 				</Form>
 			</div>
@@ -58,4 +68,9 @@ class AddBlog extends Component {
 	}
 }
 
-export default connect(null, { add })(AddBlog);
+const mapStateToProps = state => ({
+	categories: state.categories,
+	blogs: state.blogs
+});
+
+export default connect(mapStateToProps, { add })(AddBlog);
