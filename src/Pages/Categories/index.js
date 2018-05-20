@@ -63,6 +63,12 @@ class Categories extends Component {
 								onChange={this.handleChange}
 								label='Category name'
 								placeholder='Baking awesomeness' />
+							<Form.Input
+								fluid
+								name={'imageUrl'}
+								onChange={this.handleChange}
+								label='Catgory Icon/ Image'
+								placeholder='Pick a funny pick on the internet...' />
 							<Button
 							fluid={'true'}
 							color={'twitter'}
