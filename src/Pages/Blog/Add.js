@@ -23,7 +23,7 @@ class AddBlog extends Component {
 	handleSelect = (e, data) => { this.setState({ data: { ...this.state.data, [data.name]: data.value } }); };
 
 	render() {
-		const options = [ ...this.props.categories.map( category => ( { text: category.name, value: category._id }))];
+		const options = [ ...this.props.categories.map( category => ( { text: category.name, value: category.name }))];
 		return (
 			<div>
 				<h3>Paint on this form :)</h3>

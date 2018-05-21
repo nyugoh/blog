@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Table, Label, Button, Image, Modal, Confirm } from 'semantic-ui-react';
+import { Table, Label, Button, Image, Modal, Confirm, List } from 'semantic-ui-react';
 import EditCategory from '../forms/EditCategory';
 import ConfirmDelete from "../forms/DeleteConfirm";
 
@@ -30,8 +30,13 @@ class CategoryiesList extends Component {
 								{category.blogs > 0 && <Label ribbon color={'teal'}>Active</Label>}
 								{category.name}
 							</Table.Cell>
-							<Table.Cell><Image src={category.imageUrl}/></Table.Cell>
-							<Table.Cell>{category.blogs}</Table.Cell>
+							<Table.Cell>{category.imageUrl}</Table.Cell>
+							<Table.Cell>
+								<List as={'ol'}>
+									{category.articles.map( (article, index) =>{
+										return <List.Item as='a' href={article.slug} key={index}>{index+1}. {article.title}</List.Item>
+									})}
+								</List></Table.Cell>
 							<Table.Cell>
 								<Modal
 									size={'tiny'}

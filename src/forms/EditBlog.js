@@ -15,12 +15,12 @@ class EditBlog extends Component {
 
 	handleChange = e => { this.setState({ ...this.state, [e.target.name]: e.target.value }); };
 
-	handleSelect = (e, data) => { this.setState({ data: { ...this.state.data, [data.name]: data.value } }); };
+	handleSelect = (e, data) => { this.setState({ ...this.state.data, [data.name]: data.value }); };
 
 	render() {
 		const { categories } = this.props;
 		const blog = this.state;
-		const options = [ ...categories.map( category => ( { text: category.name, value: category._id }))];
+		const options = [ ...categories.map( category => ( { text: category.name, value: category.name }))];
 		return (
 			<div>
 				<Form onSubmit={this.edit}>
