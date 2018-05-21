@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Table, Label, Button, Image, Modal, Confirm, List } from 'semantic-ui-react';
+import { Table, Label, Button, Modal, List } from 'semantic-ui-react';
 import EditCategory from '../forms/EditCategory';
 import ConfirmDelete from "../forms/DeleteConfirm";
 
@@ -33,7 +33,7 @@ class CategoryiesList extends Component {
 							<Table.Cell>{category.imageUrl}</Table.Cell>
 							<Table.Cell>
 								<List as={'ol'}>
-									{category.articles.map( (article, index) =>{
+									{category.articles && category.articles.map( (article, index) =>{
 										return <List.Item as='a' href={article.slug} key={index}>{index+1}. {article.title}</List.Item>
 									})}
 								</List></Table.Cell>
@@ -52,6 +52,7 @@ class CategoryiesList extends Component {
 								</Modal>
 								<ConfirmDelete
 								category={category}
+								type={'category'}
 								remove={this.props.remove.bind(this)}/>
 							</Table.Cell>
 						</Table.Row>

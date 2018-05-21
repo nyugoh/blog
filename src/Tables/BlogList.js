@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Table, Button, Image, Modal, Label } from 'semantic-ui-react';
+import { Table, Button, Modal, Label } from 'semantic-ui-react';
 import EditBlog from '../forms/EditBlog';
 import ConfirmDelete from "../forms/DeleteConfirm";
 

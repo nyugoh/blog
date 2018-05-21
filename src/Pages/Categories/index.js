@@ -70,7 +70,7 @@ class Categories extends Component {
 								label='Catgory Icon/ Image'
 								placeholder='Pick a funny pick on the internet...' />
 							<Button
-							fluid={'true'}
+							fluid={true}
 							color={'twitter'}
 							icon
 							labelPosition={'right'}>

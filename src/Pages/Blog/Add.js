@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
-import { Form, TextArea, Button } from 'semantic-ui-react';
+import { Form, TextArea } from 'semantic-ui-react';
 import { add } from '../../actions/blog';
 
 class AddBlog extends Component {
