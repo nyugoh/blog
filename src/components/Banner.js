@@ -30,7 +30,8 @@ const authorStyles = {
 	letterSpacing: "-2px",
 	margin: "1.5rem 0 1rem",
 	textIndent: "-3px",
-	marginTop: "-10px"
+	marginTop: "-10px",
+	opacity: 0.7
 };
 
 export default Banner;
