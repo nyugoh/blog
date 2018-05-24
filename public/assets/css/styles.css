@@ -51,3 +51,14 @@ body {
 	margin-right: 10px;
 	border-right: 1px solid grey;
 }
+
+
+/* FOOTER STYLES*/
+.home-footer {
+	font-family: "Nunito", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+}
+.footer-nav {
+	margin: 50px !important;
+	padding: 30px;
+}

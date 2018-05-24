@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 import { Header, Icon, Image } from 'semantic-ui-react';
 import Banner from "../../components/Banner";
 import BlogPost from "../../components/BlogPost";
+import Footer from "../../components/Footer";
+import FooterNav from "../../components/FooterNav";
 
 class Home extends Component {
 	render() {
@@ -16,7 +18,8 @@ class Home extends Component {
 					<BlogPost/>
 				</main>
 				<footer>
-
+					<FooterNav/>
+					<Footer/>
 				</footer>
 			</div>
 		);
