@@ -35,7 +35,7 @@ class CategoryiesList extends Component {
 							<Table.Cell>
 								<List as={'ol'}>
 									{category.articles && category.articles.map( (article, index) =>{
-										return <Link to={article.slug}><List.Item key={index}>{index+1}. {article.title}</List.Item></Link>
+										return <Link to={`/${article.slug}`}><List.Item key={index}>{index+1}. {article.title}</List.Item></Link>
 									})}
 								</List></Table.Cell>
 							<Table.Cell>
