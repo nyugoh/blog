@@ -1,11 +1,13 @@
 import React, {Component} from 'react';
 import { Header, Icon, Image } from 'semantic-ui-react';
+import Banner from "../../components/Banner";
 
 class Home extends Component {
 	render() {
 		return (
 			<div className={'ui container'}>
-
+				<Banner/>
+				<div className="ui horizontal divider"><Icon name={'angle double down'}/></div>
 				{/*<main>
 					<div className={'post'}>
 						<header>

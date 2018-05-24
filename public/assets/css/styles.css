@@ -1,3 +1,7 @@
+body {
+	background-color: aliceblue !important;
+}
+
 .visible.transition {
 	margin-top: auto !important;
 	display: inline-block !important;
@@ -7,4 +11,8 @@
 }
 .ui.dimmer {
 	background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+#banner {
+	margin-top: 20px;
 }
