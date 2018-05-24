@@ -1,8 +1,13 @@
 import React, { Component } from 'react'
-import { Menu, Segment } from 'semantic-ui-react'
+import { Menu, Segment } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 export default class Main extends Component {
-	state = { activeItem: 'blog' };
+	componentDidMount() {
+		this.setState( {activeItem: window.location.pathname.split('/')[1] });
+	};
+
+	state = { activeItem: '' };
 
 	handleItemClick = (e, { name }) => {
 		this.setState({ activeItem: name });
@@ -14,9 +19,9 @@ export default class Main extends Component {
 		return (
 			<Segment inverted>
 				<Menu inverted pointing secondary>
-					<Menu.Item name='blog' active={activeItem === 'blog'} onClick={this.handleItemClick} />
-					<Menu.Item name='messages' active={activeItem === 'messages'} onClick={this.handleItemClick} />
-					<Menu.Item name='stats' active={activeItem === 'stats'} onClick={this.handleItemClick} />
+					<Link to={'/blogs'}><Menu.Item name='blogs' active={activeItem === 'blogs'} onClick={this.handleItemClick} /></Link>
+					<Link to={'/categories'}><Menu.Item name='categories' active={activeItem === 'categories'} onClick={this.handleItemClick} /></Link>
+					<Link to={'/blogs'}><Menu.Item name='stats' active={activeItem === 'stats'} onClick={this.handleItemClick} /></Link>
 				</Menu>
 			</Segment>
 		);

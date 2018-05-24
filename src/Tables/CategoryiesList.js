@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { Table, Label, Button, Modal, List } from 'semantic-ui-react';
 import EditCategory from '../forms/EditCategory';
 import ConfirmDelete from "../forms/DeleteConfirm";
+import { Link } from 'react-router-dom';
 
 class CategoryiesList extends Component {
 	constructor(props) {
@@ -34,7 +35,7 @@ class CategoryiesList extends Component {
 							<Table.Cell>
 								<List as={'ol'}>
 									{category.articles && category.articles.map( (article, index) =>{
-										return <List.Item as='a' href={article.slug} key={index}>{index+1}. {article.title}</List.Item>
+										return <Link to={article.slug}><List.Item key={index}>{index+1}. {article.title}</List.Item></Link>
 									})}
 								</List></Table.Cell>
 							<Table.Cell>

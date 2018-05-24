@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Main from "./menus/Main";
 import Footer from "./menus/Footer";
 import Blogs from './Pages/Blog';
+import Articles from './Pages/Articles';
 import Categories from './Pages/Categories';
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
 		  <Route path='/blogs' component={Blogs}/>
 		  <Route path='/categories' component={Categories}/>
 		  <Route path='/stats'/>
+		  <Route path='*' component={Articles}/>
 		</Switch>
 		<Footer/>
       </div>
