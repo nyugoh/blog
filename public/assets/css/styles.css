@@ -41,12 +41,12 @@ body {
 	font-weight: 300;
 }
 
-.blog-preview-header footer .author {
+.blog-preview-header footer .author, .blog-header .author {
 	border-right: 1px solid grey;
 	padding: 0 5px;
 	margin-left: 10px;
 }
-.blog-preview-header footer .date {
+.blog-preview-header footer .date, .blog-header .date {
 	padding: 0 10px 0 5px;
 	margin-right: 10px;
 	border-right: 1px solid grey;
@@ -62,3 +62,16 @@ body {
 	margin: 50px !important;
 	padding: 30px;
 }
+
+
+/*BODY*/
+.blog-body {
+	font-family: "Nunito", Helvetica, Arial, sans-serif !important;
+	line-height: 1.62;
+	font-size: 1.125rem;
+	-webkit-font-smoothing: antialiased;
+}
+.blog-body p {
+	color: #4a4a4a;
+}
+
