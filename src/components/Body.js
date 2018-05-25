@@ -1,16 +1,21 @@
 import React, {Component} from 'react';
 import marked from 'marked';
+import highlightjs from 'highlightjs';
 import Discuss from "./Comments";
+import $ from 'jquery';
 
 class PostBody extends Component {
 	constructor(props){
 		super(props);
 		marked.setOptions({
+			highlight: function(code) {
+				return highlightjs.highlightAuto(code).value;
+			},
 			gfm: true,
 			tables: true,
 			breaks: false,
 			pedantic: false,
-			sanitize: true,
+			sanitize: false,
 			smartLists: true,
 			smartypants: false
 		});
@@ -18,13 +23,13 @@ class PostBody extends Component {
 
 	componentWillMount() {
 		document.title = this.props.blog.title;
+		$('<code data-gist-id="edbda6f48444e6b682eae15c032a472b"/>').appendTo('body').gist();
 	};
 
 	render() {
-		const html = marked(this.props.blog.content);
+		const html = marked(`${this.props.blog.content}`);
 		return (
 			<div className={'blog-body'}>
-				<code data-gist-id="edbda6f48444e6b682eae15c032a472b" data-gist-hide-line-numbers="true"/>
 				<section>
 					<div dangerouslySetInnerHTML={{__html: html}} />
 				</section>
