@@ -1,14 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Icon, Label } from 'semantic-ui-react';
+import { Label } from 'semantic-ui-react';
+import moment from 'moment';
 
-const Title = props => {
+const Title = ({ blog }) => {
 	return(<div className={'blog-header'}>
-		<h1>Getting started with Docker for software development</h1>
+		<h1>{blog.title}</h1>
 		<p>
 			<span className={'author'}>Joe Nyugoh</span>
-			<span className="date">15 June 2017</span>
-			<Label pointing={'left'}><Link to={'/categories/linux'}>Linux</Link></Label>
+			<span className="date">{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</span>
+			<Label pointing={'left'}><Link to={'/categories/linux'}>{blog.category}</Link></Label>
 		</p>
 	</div>);
 };
