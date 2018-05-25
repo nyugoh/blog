@@ -23,6 +23,7 @@ class BlogPost extends Component {
 						<span className={'author'}>Joe Nyugoh</span>
 						<span className="date">{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</span>
 						<Label pointing={'left'}><Link to={'/categories/linux'}>{blog.category}</Link></Label>
+						<span className={'comments'}><Link to={`${blog.slug}#disqus_thread`}/></span>
 					</footer>
 				</div>
 				<div className="ui horizontal divider"><Icon name={'crosshairs'}/></div>

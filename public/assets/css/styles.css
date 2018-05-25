@@ -51,7 +51,11 @@ body {
 	margin-right: 10px;
 	border-right: 1px solid grey;
 }
-
+.blog-preview-header .comments {
+	border-left: 1px solid grey;
+	padding: 0 5px;
+	margin-left: 10px;
+}
 
 /* FOOTER STYLES*/
 .home-footer {
