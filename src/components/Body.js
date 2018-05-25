@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import marked from 'marked';
+import Discuss from "./Comments";
 
 class PostBody extends Component {
 	constructor(props){
@@ -16,14 +17,14 @@ class PostBody extends Component {
 	};
 
 	render() {
-		const html = marked(this.props.content);
+		const html = marked(this.props.blog.content);
 		return (
 			<div className={'blog-body'}>
 				<code data-gist-id="edbda6f48444e6b682eae15c032a472b" data-gist-hide-line-numbers="true"/>
 				<section>
 					<div dangerouslySetInnerHTML={{__html: html}} />
 				</section>
-
+				<Discuss blog={this.props.blog}/>
 			</div>
 		);
 	}

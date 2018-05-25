@@ -31,7 +31,7 @@ class Blog extends Component {
 						<div className="ui section divider"/>
 					</header>
 					<main>
-						<PostBody content={blog.content}/>
+						<PostBody blog={blog}/>
 					</main>
 				</div>}
 				{!blog && <Message info={true}>
