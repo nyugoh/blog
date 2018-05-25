@@ -16,6 +16,10 @@ class PostBody extends Component {
 		});
 	};
 
+	componentWillMount() {
+		document.title = this.props.blog.title;
+	};
+
 	render() {
 		const html = marked(this.props.blog.content);
 		return (
