@@ -32,7 +32,7 @@ body {
 	font-weight: 400;
 	font-style: normal;
 }
-.blog-preview-header footer {
+.blog-preview-header footer, .post-details {
 	opacity: 0.6;
 	padding: 5px 10px;
 	margin-top: 10px;

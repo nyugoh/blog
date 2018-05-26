@@ -23,7 +23,6 @@ class PostBody extends Component {
 
 	componentWillMount() {
 		document.title = this.props.blog.title;
-		// $('<code data-gist-id="edbda6f48444e6b682eae15c032a472b"/>').appendTo('body').gist();
 	};
 
 	render() {
