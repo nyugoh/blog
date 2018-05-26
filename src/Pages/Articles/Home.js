@@ -5,12 +5,14 @@ import Banner from "../../components/Banner";
 import BlogPost from "../../components/BlogPost";
 import Footer from "../../components/Footer";
 import FooterNav from "../../components/FooterNav";
+import Navbar from "../../components/Navbar";
 
 class Home extends Component {
 	render() {
 		const blogs = this.props.blogs;
 		return (
 			<div className={'ui container'}>
+				<Navbar/>
 				<Banner/>
 				<div className="ui horizontal divider"><Icon name={'crosshairs'} circular loading/></div>
 				<main>
