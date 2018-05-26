@@ -6,7 +6,7 @@ import Blog from './Blog';
 class App extends Component {
   render() {
     return (
-      <div className="ui container">
+      <div>
 		  <Switch>
 			  <Route path={'/admin'} component={Admin}/>
 			  <Route path={'/*'} component={Blog}/>

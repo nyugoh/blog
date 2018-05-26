@@ -7,17 +7,16 @@ class Post extends Component {
 	render() {
 		return (
 			<div>
+				{/*<img src="https://semantic-ui.com/images/logo.png"/>*/}
 				<header>
-					<div className="ui stackable menu">
-						<div className="item">
-							<img src="https://semantic-ui.com/images/logo.png"/>
-						</div>
-						<a className="item">Features</a>
-						<a className="item">Testimonials</a>
-						<a className="item">Sign-in</a>
+					<div className="ui main text container">
+						<h1 className="ui header">
+							Hash Node
+						</h1>
+						<p>
+							This example shows how to use lazy loaded images, a sticky menu, and a simple text container
+						</p>
 					</div>
-					<Title/>
-					<div className="ui section divider"/>
 				</header>
 				<main>
 					<PostBody/>

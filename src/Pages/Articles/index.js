@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Message } from 'semantic-ui-react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Title from "../../components/Title";
 import PostBody from "../../components/Body";
 
@@ -19,20 +20,24 @@ class Blog extends Component {
 			<div>
 				{blog && <div>
 					<header>
-						<div className="ui stackable menu">
-							<div className="item">
-								<img src="https://semantic-ui.com/images/logo.png"/>
+						<div className="ui borderless main menu fixed">
+							<div className="ui container">
+								<div className="header item" href={'/'}>
+									<img className="logo" src="/assets/images/code-idea-256x256.png"/>
+									<span className="logo-text">Ideal Code Africa</span>
+								</div>
+								<Link to={'/archive'} className={'item'}>Archive</Link>
+								<Link to={'/admin/blogs'} className={'ui right floated item'}>Admin</Link>
 							</div>
-							<a className="item">Features</a>
-							<a className="item">Testimonials</a>
-							<a className="item">Sign-in</a>
 						</div>
-						<Title blog={blog}/>
-						<div className="ui section divider"/>
 					</header>
-					<main>
-						<PostBody blog={blog}/>
-					</main>
+					<div className="ui text container main-content">
+						<Title blog={blog}/>
+						<div className="ui hidden divider"/>
+						<main>
+							<PostBody blog={blog}/>
+						</main>
+					</div>
 				</div>}
 				{!blog && <Message info={true}>
 					<Message.Header>Article not found</Message.Header>
