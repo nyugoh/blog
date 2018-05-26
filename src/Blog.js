@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Articles from './Pages/Articles';
 import Home from './Pages/Articles/Home';
-import Post from './Pages/Articles/Post';
+import Archive from './Pages/Articles/Archive';
 
 class Blog extends Component {
 	render() {
@@ -10,7 +10,8 @@ class Blog extends Component {
 			<div>
 				<Switch>
 					<Route path='/' exact component={Home}/>
-					<Route path='/template' exact component={Post}/>
+					<Route path='/categories/*' component={Home}/>
+					<Route path='/archive' exact component={Archive}/>
 					<Route path='*' component={Articles}/>
 				</Switch>
 			</div>

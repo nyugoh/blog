@@ -8,10 +8,10 @@ class Navbar extends Component {
 				<header>
 					<div className="ui borderless main menu fixed">
 						<div className="ui container">
-							<div className="header item" href={'/'}>
+							<Link className="header item" to={'/'}>
 								<img className="logo" src="/assets/images/code-idea-256x256.png"/>
 								<span className="logo-text">Ideal Code Africa</span>
-							</div>
+							</Link>
 							<Link to={'/archive'} className={'item'}>Archive</Link>
 							<Link to={'/admin/blogs'} className={'ui right floated item'}>Admin</Link>
 						</div>
