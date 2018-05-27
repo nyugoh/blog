@@ -13,7 +13,7 @@ class AddBlog extends Component {
 	};
 
 	submit = () => this.props.add(this.state.data).then( () =>{
-		this.props.history.push('/blogs');
+		this.props.history.push('/admin/blogs');
 	}).catch( error => {
 		alert(error.message);
 	});
