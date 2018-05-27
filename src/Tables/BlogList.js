@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import { Table, Button, Modal, Label } from 'semantic-ui-react';
+import { Table, Icon, Modal, Label } from 'semantic-ui-react';
 import EditBlog from '../forms/EditBlog';
 import ConfirmDelete from "../forms/DeleteConfirm";
+import moment from "moment/moment";
 
 class BlogsList extends Component {
 	constructor(props) {
@@ -17,7 +18,8 @@ class BlogsList extends Component {
 					<Table.Row>
 						<Table.HeaderCell>Blog</Table.HeaderCell>
 						<Table.HeaderCell>Cartoon</Table.HeaderCell>
-						<Table.HeaderCell>Blogs</Table.HeaderCell>
+						<Table.HeaderCell>Last update</Table.HeaderCell>
+						<Table.HeaderCell>Publish date</Table.HeaderCell>
 						<Table.HeaderCell>Actions</Table.HeaderCell>
 					</Table.Row>
 				</Table.Header>
@@ -31,15 +33,16 @@ class BlogsList extends Component {
 								{blog.title}
 							</Table.Cell>
 							<Table.Cell>{/*<Image src={blog.imageUrl}/>*/}</Table.Cell>
-							<Table.Cell>{blog.content}</Table.Cell>
+							<Table.Cell>{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</Table.Cell>
+							<Table.Cell>{moment(blog.updatedAt).format('dddd, MMMM Do YYYY')}</Table.Cell>
 							<Table.Cell>
 								<Modal
 									size={'tiny'}
-									trigger={<Button
-										positive
+									trigger={<Icon
 										inverted={true}
-										floated={'left'}
-										icon={'edit'}/>}>
+										style={{float:'left', cursor: 'pointer'}}
+										color={'green'}
+										name={'pencil'}/>}>
 									<Modal.Header>Edit a blog</Modal.Header>
 									<Modal.Content>
 										<EditBlog
@@ -51,11 +54,10 @@ class BlogsList extends Component {
 									blog={blog}
 									type={'blog'}
 									remove={this.props.remove.bind(this)}/>
-								<Button
-									inverted={true}
-									floated={'left'}
+								<Icon
+									style={{float:'left', cursor: 'pointer'}}
 									color={'teal'}
-									icon={'archive'}
+									name={'archive'}
 									onClick={this.props.archive.bind(this, blog._id)}/>
 							</Table.Cell>
 						</Table.Row>

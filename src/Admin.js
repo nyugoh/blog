@@ -6,12 +6,19 @@ import Blogs from './Pages/Blog';
 import Categories from './Pages/Categories';
 
 class Admin extends Component {
+
+	componentDidMount() {
+		document.title = 'Admin | Jarvis';
+	}
+
 	render() {
 		return (
 			<div>
 				<Main/>
-				<Route path='/admin' component={Blogs}/>
-				<Route path='/admin/categories' component={Categories}/>
+				<div className="ui container">
+					<Route path='/admin' component={Blogs}/>
+					<Route path='/admin/categories' component={Categories}/>
+				</div>
 				<Footer/>
 			</div>
 		);

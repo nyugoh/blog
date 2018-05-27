@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Table, Label, Button, Modal, List } from 'semantic-ui-react';
+import { Table, Label, Icon, Modal, List } from 'semantic-ui-react';
 import EditCategory from '../forms/EditCategory';
 import ConfirmDelete from "../forms/DeleteConfirm";
 import { Link } from 'react-router-dom';
@@ -41,9 +41,11 @@ class CategoryiesList extends Component {
 							<Table.Cell>
 								<Modal
 									size={'tiny'}
-									trigger={<Button
-										positive
-										icon={'edit'}/>}>
+									trigger={<Icon
+										inverted={true}
+										style={{float:'left', cursor: 'pointer'}}
+										color={'green'}
+										name={'pencil'}/>}>
 									<Modal.Header>Edit a category</Modal.Header>
 									<Modal.Content>
 										<EditCategory

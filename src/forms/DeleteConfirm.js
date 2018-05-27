@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Button, Confirm } from 'semantic-ui-react'
+import { Icon, Confirm } from 'semantic-ui-react'
 
 class ConfirmDelete extends Component {
 	state = { open: false };
@@ -17,11 +17,10 @@ class ConfirmDelete extends Component {
 		const { category, type, blog } = this.props;
 		return (
 			<div>
-				<Button
-					inverted={true}
-					floated={'left'}
+				<Icon
 					color={'red'}
-					icon={'trash'}
+					name={'trash'}
+					style={{float:'left', cursor: 'pointer'}}
 					onClick={this.show.bind(this)}/>
 				{type === 'blog' && <Confirm
 					open={this.state.open}
