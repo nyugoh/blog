@@ -6,6 +6,7 @@ import BlogPost from "../../components/BlogPost";
 import Footer from "../../components/Footer";
 import FooterNav from "../../components/FooterNav";
 import Navbar from "../../components/Navbar";
+import Bloglist from "../../components/Bloglist";
 
 class Home extends Component {
 	render() {
@@ -15,11 +16,7 @@ class Home extends Component {
 				<Navbar/>
 				<Banner/>
 				<div className="ui horizontal divider"><Icon name={'crosshairs'} circular loading/></div>
-				<main>
-					{blogs.length > 0 && blogs.map( blog => {
-						return <BlogPost blog={blog}/>
-					})}
-				</main>
+				<Bloglist blogs={blogs}/>
 				<footer>
 					<FooterNav/>
 					<Footer/>
