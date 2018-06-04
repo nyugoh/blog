@@ -4,9 +4,7 @@ const  general = (state=[], action={}) => {
 	const { type, payload }  = action;
 	switch (type) {
 		case types.CATEGORY_FETCH:
-			console.log(payload)
-			console.log(type)
-			return [ ... payload ];
+			return [ ...payload ];
 		default:
 			return state;
 	}

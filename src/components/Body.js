@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import marked from 'marked';
 import highlightjs from 'highlightjs';
 import Discuss from "./Comments";
-import $ from 'jquery';
 
 class PostBody extends Component {
 	constructor(props){

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Menu, Segment, Header } from 'semantic-ui-react';
+import { Menu, Segment } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
 export default class Main extends Component {

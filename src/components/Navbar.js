@@ -19,7 +19,7 @@ class Navbar extends Component {
 								<Dropdown item text='Categories'>
 									<Dropdown.Menu>
 										{this.props.categories && this.props.categories.map( (category, index) =>{
-											return <Link id={index} to={`/categories/${category.name}`}><Dropdown.Item>{category.name}</Dropdown.Item></Link>
+											return <a key={index} href={`/categories/${category.name}`}><Dropdown.Item>{category.name}</Dropdown.Item></a>
 										})}
 									</Dropdown.Menu>
 								</Dropdown>

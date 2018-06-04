@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import Main from "./menus/Main";
 import Footer from "./menus/Footer";
 import Blogs from './Pages/Blog';
