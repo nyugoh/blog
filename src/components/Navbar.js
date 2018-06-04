@@ -6,7 +6,7 @@ import { Menu, Dropdown } from 'semantic-ui-react';
 class Navbar extends Component {
 	render() {
 		return (
-			<div>
+			<div className={'navbar-main'}>
 				<header>
 					<div className="ui borderless main menu fixed">
 						<div className="ui container">
