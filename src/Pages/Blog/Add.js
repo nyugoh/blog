@@ -42,6 +42,14 @@ class AddBlog extends Component {
 						style={{minHeight: 250}}
 						onChange={this.handleChange}/>
 					<br/><br/>
+					<TextArea
+						autoHeight
+						fluid={'true'}
+						name={'description'}
+						placeholder={'Blog description'}
+						style={{minHeight: 50}}
+						onChange={this.handleChange}/>
+					<br/><br/>
 					<Form.Input
 						fluid={true}
 						name={'imageUrl'}

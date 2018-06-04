@@ -40,6 +40,15 @@ class EditBlog extends Component {
 						value={blog.content}
 						onChange={this.handleChange}/>
 					<br/><br/>
+					<TextArea
+						autoHeight
+						fluid={'true'}
+						name={'description'}
+						placeholder={'Blog description'}
+						style={{minHeight: 50}}
+						value={blog.description}
+						onChange={this.handleChange}/>
+					<br/><br/>
 					<Form.Input
 						fluid={true}
 						name={'imageUrl'}
