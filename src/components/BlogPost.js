@@ -14,8 +14,12 @@ class BlogPost extends Component {
 					</header>
 					<article>
 						<p>
-							Using ember-data's RESTSerializer it is pretty simple to integrate with a standard API and pull data. In my previous post I talked about what format the Using ember-data's RESTSerializer it is pretty simple to integrate with a standard API and pull data. In my previous post I talked about what format the Using ember-data's RESTSerializer it is pretty simple to integrate with a standard API and pull data. In my previous post I talked about what format the Using ember-data's RESTSerializer it is pretty simple to integrate with a standard API and pull data. In my previous post I talked about what format the
-							<Link to={`/${blog.slug}`}>...  <Icon name={'angle double right'}/></Link>
+							{blog.description}
+							<Link
+								to={`/${blog.slug}`}>
+								...
+								<Icon name={'angle double right'}/>
+							</Link>
 						</p>
 					</article>
 					<footer>
