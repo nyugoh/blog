@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Header } from 'semantic-ui-react';
 
-const avatar = 'https://www.emberjs.com/images/tomsters/chicago-tomster-ccd89463.png';
+const avatar = '/assets/images/logo.png';
 
 const Banner = props =>{
 	return (
@@ -13,7 +13,8 @@ const Banner = props =>{
 			</div>
 			<div className="ui row">
 				<div className="ui column center aligned">
-					<Header as={'h1'} style={authorStyles}>Joe Nyugoh</Header>
+					<Header as={'h1'} style={authorStyles}>Ideal Code Africa</Header>
+					<p>Great minds with potential</p>
 				</div>
 			</div>
 		</header>
@@ -21,6 +22,8 @@ const Banner = props =>{
 };
 
 const avatarStyles = {
+	marginTop: 30,
+	marginBottom: -10,
 	width: 115,
 	height: 115
 };
