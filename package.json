@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "ideal_code_africa",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -31,5 +31,7 @@
   "devDependencies": {
     "redux-devtools-extension": "^2.13.2"
   },
+  "author": "Joe N Ngigi",
+  "git": "git@github.com:nyugoh/blog-app",
   "proxy": "http://localhost:8080"
 }
