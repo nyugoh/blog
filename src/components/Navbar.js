@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Menu, Dropdown } from 'semantic-ui-react';
 
 class Navbar extends Component {
 	render() {
@@ -9,11 +11,19 @@ class Navbar extends Component {
 					<div className="ui borderless main menu fixed">
 						<div className="ui container">
 							<Link className="header item" to={'/'}>
-								<img className="logo" src="/assets/images/code-idea-256x256.png"/>
+								<img className="logo" alt={'Ideal Code Africa logo'} src="/assets/images/code-idea-256x256.png"/>
 								<span className="logo-text">Ideal Code Africa</span>
 							</Link>
 							<Link to={'/archive'} className={'item'}>Archive</Link>
-							<Link to={'/admin/blogs'} className={'ui right floated item'}>Admin</Link>
+							<Menu.Menu position='right'>
+								<Dropdown item text='Categories'>
+									<Dropdown.Menu>
+										{this.props.categories && this.props.categories.map( (category, index) =>{
+											return <Link id={index} to={`/categories/${category.name}`}><Dropdown.Item>{category.name}</Dropdown.Item></Link>
+										})}
+									</Dropdown.Menu>
+								</Dropdown>
+							</Menu.Menu>
 						</div>
 					</div>
 				</header>
@@ -22,4 +32,8 @@ class Navbar extends Component {
 	}
 }
 
-export default Navbar;
+const mapStateToProps = state => ({
+	categories: state.categories
+});
+
+export default connect(mapStateToProps)(Navbar);
