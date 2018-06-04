@@ -7,7 +7,8 @@ class Bloglist extends Component {
 			<div>
 				<main>
 					{this.props.blogs.length > 0 && this.props.blogs.map( (blog, index) => {
-						return <BlogPost key={index} blog={blog}/>
+						if (blog.status === 1)
+							return <BlogPost key={index} blog={blog}/>
 					})}
 				</main>
 			</div>

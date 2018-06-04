@@ -28,17 +28,18 @@ class Archive extends Component{
 								</Table.Header>
 								<Table.Body>
 									{blogs.map( (blog, index) => {
-										return <Table.Row key={index}>
-											<Table.Cell>{index+1}</Table.Cell>
-											<Table.Cell>
-												<Link to={`/${blog.slug}`}>{blog.title}</Link>
-											</Table.Cell>
-											<Table.Cell>
-												<Link to={`/categories/${blog.category}`}>{blog.category}</Link>
-											</Table.Cell>
-											<Table.Cell>{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</Table.Cell>
-											<Table.Cell>{moment(blog.updatedAt).format('dddd, MMMM Do YYYY')}</Table.Cell>
-										</Table.Row>
+										if (blog.status === 1)
+											return <Table.Row key={index}>
+												<Table.Cell>{index+1}</Table.Cell>
+												<Table.Cell>
+													<Link to={`/${blog.slug}`}>{blog.title}</Link>
+												</Table.Cell>
+												<Table.Cell>
+													<Link to={`/categories/${blog.category}`}>{blog.category}</Link>
+												</Table.Cell>
+												<Table.Cell>{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</Table.Cell>
+												<Table.Cell>{moment(blog.updatedAt).format('dddd, MMMM Do YYYY')}</Table.Cell>
+											</Table.Row>
 									} )}
 								</Table.Body>
 							</Table>
