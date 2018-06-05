@@ -10,7 +10,7 @@ class Blog extends Component {
 		return (
 			<div>
 				<Switch>
-					<Route path='/blog' exact component={Home}/>
+					<Route path='/blog/' exact component={Home}/>
 					<Route path='/blog/categories/*' component={Categories}/>
 					<Route path='/blog/archive' exact component={Archive}/>
 					<Route path='/blog/*' component={Articles}/>

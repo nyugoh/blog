@@ -35,7 +35,7 @@
     "redux-devtools-extension": "^2.13.2"
   },
   "author": "Joe N Ngigi",
-  "git": "git@github.com:nyugoh/blog-app",
+  "git": "git@github.com:nyugoh/blog",
   "proxy": "http://localhost:8080",
   "homepage": "https://nyugoh.github.io/blog"
 }
