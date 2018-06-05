@@ -10,13 +10,13 @@ class BlogPost extends Component {
 			<div>
 				<div className={'post blog-preview-header'}>
 					<header>
-						<h2><Link to={`/${blog.slug}`}>{blog.title}</Link></h2>
+						<h2><Link to={`/blog/${blog.slug}`}>{blog.title}</Link></h2>
 					</header>
 					<article>
 						<p>
 							{blog.description}
 							<Link
-								to={`/${blog.slug}`}>
+								to={`/blog/${blog.slug}`}>
 								...
 								<Icon name={'angle double right'}/>
 							</Link>
@@ -26,8 +26,8 @@ class BlogPost extends Component {
 						<Icon name={'user'} circular/>
 						<span className={'author'}>Joe Nyugoh</span>
 						<span className="date">{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</span>
-						<Label pointing={'left'}><Link to={`/categories/${blog.category}`}>{blog.category}</Link></Label>
-						<span className={'comments'}><Link to={`${blog.slug}#disqus_thread`}/></span>
+						<Label pointing={'left'}><Link to={`/blog/categories/${blog.category}`}>{blog.category}</Link></Label>
+						<span className={'comments'}><Link to={`/blog/${blog.slug}#disqus_thread`}/></span>
 					</footer>
 				</div>
 				<div className="ui horizontal divider"><Icon name={'crosshairs'}/></div>

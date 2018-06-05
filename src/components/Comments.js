@@ -5,7 +5,7 @@ class Discuss extends Component {
 
 	componentDidMount() {
 		let disqus_config = function () {
-			this.page.url = `http://localhost:3000`;
+			this.page.url = `https://nyugoh.github.io/blog`;
 			this.page.identifier = this.props.blog._id;
 		};
 		let d = document, s = d.createElement('script');

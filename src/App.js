@@ -8,8 +8,8 @@ class App extends Component {
     return (
       <div>
 		  <Switch>
-			  <Route path={'/admin'} component={Admin}/>
-			  <Route path={'/*'} component={Blog}/>
+			  <Route path={'/blog/admin'} component={Admin}/>
+			  <Route path={'/blog/*'} component={Blog}/>
 		  </Switch>
       </div>
     );

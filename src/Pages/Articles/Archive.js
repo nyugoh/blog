@@ -32,10 +32,10 @@ class Archive extends Component{
 											return <Table.Row key={index}>
 												<Table.Cell>{index+1}</Table.Cell>
 												<Table.Cell>
-													<Link to={`/${blog.slug}`}>{blog.title}</Link>
+													<Link to={`/blog/${blog.slug}`}>{blog.title}</Link>
 												</Table.Cell>
 												<Table.Cell>
-													<Link to={`/categories/${blog.category}`}>{blog.category}</Link>
+													<Link to={`/blog/categories/${blog.category}`}>{blog.category}</Link>
 												</Table.Cell>
 												<Table.Cell>{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</Table.Cell>
 												<Table.Cell>{moment(blog.updatedAt).format('dddd, MMMM Do YYYY')}</Table.Cell>

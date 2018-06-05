@@ -9,7 +9,7 @@ const Title = ({ blog }) => {
 		<p className={'post-details'}>
 			<span className={'author'}>Joe Nyugoh</span>
 			<span className="date">{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</span>
-			<Label pointing={'left'}><Link to={`/categories/${blog.category}`}>{blog.category}</Link></Label>
+			<Label pointing={'left'}><Link to={`/blog/categories/${blog.category}`}>{blog.category}</Link></Label>
 		</p>
 	</div>);
 };

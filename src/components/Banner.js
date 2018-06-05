@@ -1,7 +1,7 @@
 import React from 'react';
 import { Image, Header } from 'semantic-ui-react';
 
-const avatar = '/assets/images/logo.png';
+const avatar = '/blog/assets/images/logo.png';
 
 const Banner = props =>{
 	return (

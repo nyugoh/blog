@@ -11,7 +11,7 @@ class Blog extends Component {
 	};
 
 	componentDidMount() {
-		this.setState({ currentArticle: this.props.history.location.pathname.split('/')[1] });
+		this.setState({ currentArticle: this.props.history.location.pathname.split('/')[2] });
 	};
 
 	render() {
