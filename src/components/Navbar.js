@@ -10,16 +10,16 @@ class Navbar extends Component {
 				<header>
 					<div className="ui borderless main menu fixed">
 						<div className="ui container">
-							<Link className="header item" to={'/blog'}>
-								<img className="logo" alt={'Ideal Code Africa logo'} src="/blog/assets/images/code-idea-256x256.png"/>
+							<Link className="header item" to={'/'}>
+								<img className="logo" alt={'Ideal Code Africa logo'} src="/assets/images/code-idea-256x256.png"/>
 								<span className="logo-text">Ideal Code Africa</span>
 							</Link>
-							<Link to={'/blog/archive'} className={'item'}>Archive</Link>
+							<Link to={'/archive'} className={'item'}>Archive</Link>
 							<Menu.Menu position='right'>
 								<Dropdown item text='Categories'>
 									<Dropdown.Menu>
 										{this.props.categories && this.props.categories.map( (category, index) =>{
-											return <a key={index} href={`/blog/categories/${category.name}`}><Dropdown.Item>{category.name}</Dropdown.Item></a>
+											return <a key={index} href={`/categories/${category.name}`}><Dropdown.Item>{category.name}</Dropdown.Item></a>
 										})}
 									</Dropdown.Menu>
 								</Dropdown>

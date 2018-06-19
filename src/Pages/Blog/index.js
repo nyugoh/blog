@@ -10,7 +10,7 @@ class Blog extends Component {
 			<div>
 				<div>
 					<Header floated={'left'} as={'h2'}>Blogs panel</Header>
-					<Link to={'/blog/admin/blogs/add'}>
+					<Link to={'/admin/blogs/add'}>
 						<Button
 							positive
 							icon
@@ -24,8 +24,8 @@ class Blog extends Component {
 				<br/><br/>
 				<div className="ui divider"/>
 				<Switch>
-					<Route path='/blog/admin/blogs' exact component={List}/>
-					<Route path='/blog/admin/blogs/add' component={Add}/>
+					<Route path='/admin/blogs' exact component={List}/>
+					<Route path='/admin/blogs/add' component={Add}/>
 				</Switch>
 			</div>
 		);

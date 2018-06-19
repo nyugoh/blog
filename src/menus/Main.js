@@ -19,9 +19,9 @@ export default class Main extends Component {
 		return (
 			<Segment inverted style={menu}>
 				<Menu inverted pointing secondary className={'ui container'} borderless>
-					<Link to={'/blog/admin/blogs'}><Menu.Item as={'h4'}  name='admin' active={activeItem === 'admin'} onClick={this.handleItemClick} /></Link>
-					<Link to={'/blog/admin/categories'}><Menu.Item name='categories' active={activeItem === 'categories'} onClick={this.handleItemClick} /></Link>
-					<Link to={'/blog/admin/stats'}><Menu.Item name='stats' active={activeItem === 'stats'} onClick={this.handleItemClick} /></Link>
+					<Link to={'/admin/blogs'}><Menu.Item as={'h4'}  name='admin' active={activeItem === 'admin'} onClick={this.handleItemClick} /></Link>
+					<Link to={'/admin/categories'}><Menu.Item name='categories' active={activeItem === 'categories'} onClick={this.handleItemClick} /></Link>
+					<Link to={'/admin/stats'}><Menu.Item name='stats' active={activeItem === 'stats'} onClick={this.handleItemClick} /></Link>
 				</Menu>
 			</Segment>
 		);

@@ -16,8 +16,8 @@ class Admin extends Component {
 			<div>
 				<Main/>
 				<div className="ui container">
-					<Route path='/blog/admin' component={Blogs}/>
-					<Route path='/blog/admin/categories' component={Categories}/>
+					<Route path='/admin' component={Blogs}/>
+					<Route path='/admin/categories' component={Categories}/>
 				</div>
 				<Footer/>
 			</div>
