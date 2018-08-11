@@ -7,9 +7,9 @@ const Title = ({ blog }) => {
 	return(<div className={'blog-header'}>
 		<h1>{blog.title}</h1>
 		<p className={'post-details'}>
-			<span className={'author'}>Joe Nyugoh</span>
-			<span className="date">{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</span>
-			<Label pointing={'left'}><Link to={`/categories/${blog.category}`}>{blog.category}</Link></Label>
+			{/* <span className={'author'}>Joe Nyugoh</span> */}
+			<span className="date">{moment(blog.updatedAt).format('dddd, MMMM Do YYYY')}</span>
+			<Link to={`/categories/${blog.category}`} className="title-tag">{blog.category}</Link>
 		</p>
 	</div>);
 };

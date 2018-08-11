@@ -1,7 +1,7 @@
 import * as types from '../consts';
 import axios from 'axios';
 
-const base = '/api/v1/blog/categories';
+const base = '/api/v1/categories';
 
 export const add = skill => dispatch => axios.post(`${base}/add`, {skill}).then( response => {
 	dispatch({
@@ -11,6 +11,7 @@ export const add = skill => dispatch => axios.post(`${base}/add`, {skill}).then(
 });
 
 export const fetch = skill => dispatch => axios.get(`${base}/list`).then( response => {
+	console.log(response.data);
 	dispatch({
 		type: types.CATEGORY_FETCHED,
 		payload: response.data.categories

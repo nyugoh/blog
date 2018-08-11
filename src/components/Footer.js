@@ -1,15 +1,14 @@
 import React from 'react';
 
 const Footer = props =>{
-	return (<div>
-		<div className="ui horizontal divider">_</div>
-		<div className="ui column grid home-footer">
-			<div className="ui row">
-				<div className="ui column">
-					<p>
-						<span className="ui left aligned">Joe Nyugoh &copy; {new Date().getFullYear()}</span>
-					</p>
-				</div>
+	return (<div styles={{marginTop: "30"}}>
+		<div className="ui divider"></div>
+		<div className="ui container">
+			<div className="ui text footer blog-description">
+			<p>
+				<span className="ui left aligned">Joe Nyugoh &copy; {new Date().getFullYear()}</span>
+			</p>
+			<p>Making computers your slave.</p>
 			</div>
 		</div>
 	</div>);

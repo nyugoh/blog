@@ -12,21 +12,15 @@ class BlogPost extends Component {
 					<header>
 						<h2><Link to={`/${blog.slug}`}>{blog.title}</Link></h2>
 					</header>
-					<article>
+					<article className='blog-description'>
 						<p>
 							{blog.description}
-							<Link
-								to={`/${blog.slug}`}>
-								...
-								<Icon name={'angle double right'}/>
-							</Link>
+							
 						</p>
 					</article>
 					<footer>
-						<Icon name={'user'} circular/>
-						<span className={'author'}>Joe Nyugoh</span>
-						<span className="date">{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</span>
-						<Label pointing={'left'}><Link to={`/categories/${blog.category}`}>{blog.category}</Link></Label>
+						<span className="date">{moment(blog.updatedAt).format('dddd, MMMM Do YYYY')}</span>
+						<Link to={`/categories/${blog.category}`}>{blog.category}</Link>
 						<span className={'comments'}><Link to={`/${blog.slug}#disqus_thread`}/></span>
 					</footer>
 				</div>

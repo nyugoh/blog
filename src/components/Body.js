@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import marked from 'marked';
 import highlightjs from 'highlightjs';
+import $ from 'jquery';
 import Discuss from "./Comments";
 
 class PostBody extends Component {
@@ -22,6 +23,11 @@ class PostBody extends Component {
 
 	componentWillMount() {
 		document.title = this.props.blog.title;
+		$(document).ready(function() {
+			$('pre code').each(function(i, block) {
+				highlightjs.highlightBlock(block);
+			});
+		});
 	};
 
 	render() {
@@ -30,6 +36,7 @@ class PostBody extends Component {
 			<div className={'blog-body'}>
 				<section>
 					<div dangerouslySetInnerHTML={{__html: html}} />
+					
 				</section>
 				<Discuss blog={this.props.blog}/>
 			</div>

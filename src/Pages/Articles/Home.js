@@ -8,18 +8,18 @@ import Navbar from "../../components/Navbar";
 import Bloglist from "../../components/Bloglist";
 
 class Home extends Component {
+	componentWillMount() {
+		document.title = "Joe Nyugoh";
+	}
 	render() {
 		const blogs = this.props.blogs;
 		return (
-			<div className={'ui container'}>
+			<div>
 				<Navbar/>
-				<Banner/>
-				<div className="ui horizontal divider"><Icon name={'crosshairs'} circular loading/></div>
+				<div className={'ui container'}>
 				<Bloglist blogs={blogs}/>
-				<footer>
-					<FooterNav/>
-					<Footer/>
-				</footer>
+				</div>
+				<Footer/>
 			</div>
 		);
 	}
