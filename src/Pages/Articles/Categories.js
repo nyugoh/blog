@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import Navbar from "../../components/Navbar";
 import { fetchCategory } from '../../actions/blog';
 import Bloglist from "../../components/Bloglist";
+import Footer from '../../components/Footer';
 
 class Categories extends Component {
 	componentWillMount() {
@@ -17,6 +18,7 @@ class Categories extends Component {
 					<div className="ui text container main-content">
 						{blogs.length > 0 && <Bloglist blogs={blogs}/>}
 					</div>
+					<Footer/>
 				</div>
 			);
 		else
@@ -24,6 +26,7 @@ class Categories extends Component {
 				<div>
 					<Navbar/>
 					Loading ...
+					<Footer/>
 				</div>
 			)
 	}

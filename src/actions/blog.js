@@ -42,7 +42,7 @@ export const archive = id => dispatch => axios.put(`${base}/archive/${id}`).then
 	});
 });
 
-export const fetchCategory = category => dispatch => axios.get(`${base}/${category}`).then( response => {
+export const fetchCategory = category => dispatch => axios.get(`${base}/categories/${category}`).then( response => {
 	dispatch({
 		type: types.CATEGORY_FETCH,
 		payload: response.data.blogs
