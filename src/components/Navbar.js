@@ -16,7 +16,7 @@ class Navbar extends Component {
 							</Link>
 							<Menu.Menu position='right'>
 								<Link to={'/archive'} className={'item'}>Archive</Link>
-								<Link to={'/archive'} className={'item'}>Contact</Link>
+								<Link to={'/contact'} className={'item'}>Contact</Link>
 							</Menu.Menu>
 						</div>
 					</div>

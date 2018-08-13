@@ -48,3 +48,10 @@ export const fetchCategory = category => dispatch => axios.get(`${base}/${catego
 		payload: response.data.blogs
 	})
 });
+
+export const send = message => dispatch => axios.post(`${base}/send`, { message }).then( response =>{
+	dispatch({
+		type: types.MESSAGE_SENT,
+		payload: response.data.message
+	});
+});

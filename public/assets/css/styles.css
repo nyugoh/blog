@@ -3,6 +3,9 @@
 a, a:visited, a:active {
 	color: coral !important;
 }
+input:focus, textarea:focus {
+	border-color: coral !important;
+}
 .visible.transition {
 	margin-top: auto !important;
 	display: inline-block !important;

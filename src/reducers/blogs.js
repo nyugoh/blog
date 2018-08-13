@@ -11,6 +11,8 @@ const blogs = (state = [], action = {}) => {
 			return state.map( item => item._id === payload._id?payload:item);
 		case types.BLOG_DELETED:
 			return state.filter( item => item._id !== payload);
+		case types.MESSAGE_SENT:
+			return state;
 		default:
 			return state;
 	}
