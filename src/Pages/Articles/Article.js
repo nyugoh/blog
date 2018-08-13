@@ -22,7 +22,7 @@ class Blog extends Component {
 				{blog && <div>
 					<Navbar/>
 					<div className="ui container">
-					<Grid>
+					<Grid stackable='true'>
 						<Grid.Row>
 							<Grid.Column width={12}>
 								<Title blog={blog}/>

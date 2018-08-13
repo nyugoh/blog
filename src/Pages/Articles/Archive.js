@@ -14,12 +14,10 @@ class Archive extends Component{
 				<div className="main-content">
 					<div className="ui container">
 						<Header as={'h3'}>Archives</Header>
-						<div className="ui horizontal divider"><Icon name={'archive'} color={'teal'} size={'small'}/></div>
 						<div className="archive">
-							<Table color={'blue'} celled selectable={true} striped={true}>
+							<Table  selectable={true} striped={true}>
 								<Table.Header>
 									<Table.Row>
-										<Table.HeaderCell />
 										<Table.HeaderCell>Title</Table.HeaderCell>
 										<Table.HeaderCell>Category</Table.HeaderCell>
 										<Table.HeaderCell>Date Published</Table.HeaderCell>
@@ -30,7 +28,6 @@ class Archive extends Component{
 									{blogs.map( (blog, index) => {
 										if (blog.status === 1)
 											return <Table.Row key={index}>
-												<Table.Cell>{index+1}</Table.Cell>
 												<Table.Cell>
 													<Link to={`/${blog.slug}`}>{blog.title}</Link>
 												</Table.Cell>

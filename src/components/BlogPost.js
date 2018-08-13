@@ -21,7 +21,9 @@ class BlogPost extends Component {
 					<footer>
 						<span className="date">{moment(blog.updatedAt).format('dddd, MMMM Do YYYY')}</span>
 						<Link to={`/categories/${blog.category}`}>{blog.category}</Link>
-						<span className={'comments'}><Link to={`/${blog.slug}#disqus_thread`}/></span>
+						{/* <span className="disqus-comment-count"><Link to={`/${blog.slug}#disqus_thread`}/></span> */}
+						{/* <a className="disqus-comment-count" href={`http://localhost:3000/${blog.slug}/#disqus_thread`}>Second article</a> */}
+						{/* <span className="disqus-comment-count" data-disqus-identifier={blog.slug}></span> */}
 					</footer>
 				</div>
 				<div className="ui horizontal divider"><Icon name={'crosshairs'}/></div>

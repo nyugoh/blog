@@ -4,9 +4,9 @@ import { Icon } from 'semantic-ui-react';
 class Discuss extends Component {
 
 	componentDidMount() {
-		let disqus_config = function () {
-			this.page.url = `https://nyugoh.github.io/blog`;
-			this.page.identifier = this.props.blog._id;
+		var disqus_config = function () {
+			this.page.url = "http://localhost";
+			this.page.identifier = this.props.blog.slug;
 		};
 		let d = document, s = d.createElement('script');
 		s.src = 'https://localhost-jqt7lwk8m7.disqus.com/embed.js';
