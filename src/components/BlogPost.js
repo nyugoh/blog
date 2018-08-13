@@ -6,7 +6,6 @@ import moment from 'moment';
 class BlogPost extends Component {
 	render() {
 		const blog = this.props.blog;
-		console.log(blog)
 		return (
 			<div>
 				<div className={'post blog-preview-header'}>
