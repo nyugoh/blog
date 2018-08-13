@@ -11,7 +11,6 @@ export const add = skill => dispatch => axios.post(`${base}/add`, {skill}).then(
 });
 
 export const fetch = skill => dispatch => axios.get(`${base}/list`).then( response => {
-	console.log(response.data);
 	dispatch({
 		type: types.CATEGORY_FETCHED,
 		payload: response.data.categories

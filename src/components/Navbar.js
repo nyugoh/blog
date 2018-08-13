@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Menu, Dropdown } from 'semantic-ui-react';
+import { Menu } from 'semantic-ui-react';
 
 class Navbar extends Component {
 	render() {

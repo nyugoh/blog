@@ -39,11 +39,11 @@ class Contact extends Component {
 	render() {
         const extra = (
             <div>
-                <p><a href='https://github.com/nyugoh' target='_blank'>
+                <p><a href='https://github.com/nyugoh' target='_blank' rel="noopener noreferrer">
                 <Icon name='github' />
                 56 Repositories
                 </a></p>
-                <p><a href='https://nyugoh.github.io' target='_blank'>
+                <p><a href='https://nyugoh.github.io' target='_blank' rel="noopener noreferrer">
                 <Icon name='globe' />
                 Portfolio
                 </a></p>
@@ -60,8 +60,8 @@ class Contact extends Component {
                             <Grid.Column width={12} className={'blog-description'}>
                             <div>
                             <div style={{marginBottom: 20, paddingLeft: 5}}>
-                                <Image src="https://pic.sopili.net/pub/emoji/twitter/2/72x72/1f44a.png" width='20' height='20' avatar/>
-                                <span className='lead text'>Hey, hey, thanks for stopping by. I would like to hear from you, either to just say <img src="https://pic.sopili.net/pub/emoji/twitter/2/72x72/1f44b.png" width='20' height='20'/>
+                                <Image alt=':fist:' src="https://pic.sopili.net/pub/emoji/twitter/2/72x72/1f44a.png" width='20' height='20' avatar/>
+                                <span className='lead text'>Hey, hey, thanks for stopping by. I would like to hear from you, either to just say <img src="https://pic.sopili.net/pub/emoji/twitter/2/72x72/1f44b.png" width='20' height='20' alt=''/>
                                 , or hire my services for your project or help you fix bugs. I will get back to you ASAP.</span>
                             </div>
                             <Form onSubmit={this.submit} loading={this.state.loading}>
@@ -111,22 +111,22 @@ class Contact extends Component {
                             <div className="ui divider"/>
                             <h3>Let's connect on social media</h3>
                                 <div stackable='true' className='clearfix' style={{textAlign: 'center', marginTop:30, marginBottom: 60, clear: 'both'}}>
-                                    <Button color='facebook' href='https://www.facebook.com/joe.nyugoh' target='_blank'>
+                                    <Button color='facebook' href='https://www.facebook.com/joe.nyugoh' target='_blank' rel="noopener noreferrer">
                                     <Icon name='facebook' /> Facebook
                                     </Button>
-                                    <Button color='twitter' href='https://twitter.com/joenyugoh' target='_blank'>
+                                    <Button color='twitter' href='https://twitter.com/joenyugoh' target='_blank' rel="noopener noreferrer">
                                     <Icon name='twitter' /> Twitter
                                     </Button>
-                                    <Button color='google plus' href='https://plus.google.com/u/0/+JOENYUGOH' target='_blank'>
+                                    <Button color='google plus' href='https://plus.google.com/u/0/+JOENYUGOH' target='_blank' rel="noopener noreferrer">
                                     <Icon name='google plus' /> Google Plus
                                     </Button>
-                                    <Button color='linkedin' href='https://www.linkedin.com/in/joe-nyugoh-854b80a1/' target='_blank'>
+                                    <Button color='linkedin' href='https://www.linkedin.com/in/joe-nyugoh-854b80a1/' target='_blank' rel="noopener noreferrer">
                                     <Icon name='linkedin' /> LinkedIn
                                     </Button>
-                                    <Button color='instagram' href='https://www.instagram.com/nyugohjoe/' target='_blank'>
+                                    <Button color='instagram' href='https://www.instagram.com/nyugohjoe/' target='_blank' rel="noopener noreferrer">
                                     <Icon name='instagram' /> Instagram
                                     </Button>
-                                    <Button color='youtube' href='https://www.youtube.com/channel/UCsseZBg1zu7VwXWgS24MuCQ' target='_blank'>
+                                    <Button color='youtube' href='https://www.youtube.com/channel/UCsseZBg1zu7VwXWgS24MuCQ' target='_blank' rel="noopener noreferrer">
                                     <Icon name='youtube' /> YouTube
                                     </Button>
                                 </div>

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Header, Icon, Table } from 'semantic-ui-react';
+import { Header, Table } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import Navbar from "../../components/Navbar";
 import moment from 'moment';
@@ -37,6 +37,7 @@ class Archive extends Component{
 												<Table.Cell>{moment(blog.createdAt).format('dddd, MMMM Do YYYY')}</Table.Cell>
 												<Table.Cell>{moment(blog.updatedAt).format('dddd, MMMM Do YYYY')}</Table.Cell>
 											</Table.Row>
+										
 									} )}
 								</Table.Body>
 							</Table>

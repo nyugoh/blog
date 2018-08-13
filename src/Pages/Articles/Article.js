@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Message, Grid } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import Title from "../../components/Title";
 import PostBody from "../../components/Body";
@@ -22,7 +22,7 @@ class Blog extends Component {
 				{blog && <div>
 					<Navbar/>
 					<div className="ui container">
-					<Grid stackable='true'>
+					<Grid stackable={true}>
 						<Grid.Row>
 							<Grid.Column width={12}>
 								<Title blog={blog}/>

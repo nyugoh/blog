@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import { Icon, Label } from 'semantic-ui-react';
+import { Icon } from 'semantic-ui-react';
 import moment from 'moment';
 
 class BlogPost extends Component {
