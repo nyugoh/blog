@@ -1,7 +1,7 @@
 import * as types from '../consts';
 import axios from 'axios';
 
-const base = '/api/v1/categories';
+const base = 'http://localhost:8080/api/v1/categories';
 
 export const add = skill => dispatch => axios.post(`${base}/add`, {skill}).then( response => {
 	dispatch({
