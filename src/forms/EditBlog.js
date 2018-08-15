@@ -18,8 +18,11 @@ class EditBlog extends Component {
 	handleSelect = (e, data) => { this.setState({ ...this.state.data, [data.name]: data.value }); };
 
 	render() {
-		const { categories } = this.props;
+		const { categories, id, post } = this.props;
 		const blog = this.state;
+		console.log(post)
+		// let post = posts.map( post => { if (post._id == id) return post});
+		// console.log(post)
 		const options = [ ...categories.map( category => ( { text: category.name, value: category.name }))];
 		return (
 			<div>
@@ -79,7 +82,8 @@ class EditBlog extends Component {
 }
 
 const mapStateToProps = state => ({
-	categories: state.categories
+	categories: state.categories,
+	posts: state.posts
 });
 
 export default connect(mapStateToProps)(EditBlog);

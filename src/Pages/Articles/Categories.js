@@ -15,7 +15,7 @@ class Categories extends Component {
 			return (
 				<div>
 					<Navbar/>
-					<div className="ui text container main-content">
+					<div className="ui container main-content">
 						{blogs.length > 0 && <Bloglist blogs={blogs}/>}
 					</div>
 					<Footer/>

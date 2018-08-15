@@ -3,6 +3,7 @@ import { Switch, Route, Link } from 'react-router-dom';
 import { Button, Icon, Header } from 'semantic-ui-react';
 import List from './List';
 import Add from './Add';
+import Edit from './Edit';
 
 class Blog extends Component {
 	render() {
@@ -26,6 +27,7 @@ class Blog extends Component {
 				<Switch>
 					<Route path='/admin/blogs' exact component={List}/>
 					<Route path='/admin/blogs/add' component={Add}/>
+					<Route path='/admin/blogs/edit/:id' component={Edit}/>
 				</Switch>
 			</div>
 		);

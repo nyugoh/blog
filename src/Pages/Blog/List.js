@@ -5,7 +5,6 @@ import { edit, remove, archive } from '../../actions/blog';
 
 class BlogList extends Component {
 	edit = (data) =>{
-		console.log(data);
 		this.props.edit(data).then( () =>{
 			// TODO: Close modal
 			// this.setState({open: false});
@@ -16,7 +15,6 @@ class BlogList extends Component {
 
 	archive = (id) =>{
 		this.props.archive(id).then( () =>{
-			alert('archived ....!!!');
 		}).catch( error =>{
 			alert(error.message);
 		});
@@ -24,7 +22,6 @@ class BlogList extends Component {
 
 	remove = (id) =>{
 		this.props.remove(id).then( () =>{
-			alert('Deleted....!!!');
 		}).catch( error =>{
 			alert(error.message);
 		});
