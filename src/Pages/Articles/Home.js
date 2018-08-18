@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import Footer from "../../components/Footer";
 import Navbar from "../../components/Navbar";
 import Bloglist from "../../components/Bloglist";
@@ -16,6 +17,7 @@ class Home extends Component {
 				<div className={'ui container'}>
 				<Bloglist blogs={blogs}/>
 				</div>
+				<Link to={'/admin/blogs'}><span style={{color: '#fff'}}>///</span></Link>
 				<Footer/>
 			</div>
 		);

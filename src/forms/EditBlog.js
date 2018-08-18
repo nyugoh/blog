@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
 import { Form, TextArea } from 'semantic-ui-react';
 import { connect } from 'react-redux';
+import { edit } from '../actions/blog';
 
 class EditBlog extends Component {
-	constructor(props){
-		super(props);
-		this.state = { ...props.blog };
-	};
-
+	
 	edit = () =>{
 		this.props.edit(this.state);
 		this.setState({});
 	};
+
+	componentDidMount() {
+		// this.state = this.props.blog;
+	}
 
 	handleChange = e => { this.setState({ ...this.state, [e.target.name]: e.target.value }); };
 
@@ -19,10 +20,11 @@ class EditBlog extends Component {
 
 	render() {
 		const { categories, id, post } = this.props;
-		const blog = this.state;
-		console.log(post)
-		// let post = posts.map( post => { if (post._id == id) return post});
-		// console.log(post)
+		let blog = {};
+		if (post){
+			this.state = {...post};
+			blog = this.state;
+		}
 		const options = [ ...categories.map( category => ( { text: category.name, value: category.name }))];
 		return (
 			<div>
@@ -31,8 +33,15 @@ class EditBlog extends Component {
 						fluid={true}
 						name={'title'}
 						placeholder={'Add a title here...'}
-						label={'Blog title'}
+						label={'Title'}
 						value={blog.title}
+						onChange={this.handleChange}/>
+					<Form.Input
+						fluid={true}
+						name={'slug'}
+						placeholder={'Edit the slug...'}
+						label={'Blog Slug'}
+						value={blog.slug}
 						onChange={this.handleChange}/>
 					<TextArea
 						autoHeight
@@ -86,4 +95,4 @@ const mapStateToProps = state => ({
 	posts: state.posts
 });
 
-export default connect(mapStateToProps)(EditBlog);
+export default connect(mapStateToProps, { edit })(EditBlog);

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { Table, Icon, Modal, Label } from 'semantic-ui-react';
+import { Table, Icon, Label } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import ConfirmDelete from "../forms/DeleteConfirm";
 import moment from "moment/moment";
