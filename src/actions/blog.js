@@ -1,7 +1,7 @@
 import axios from 'axios';
 import * as types from '../consts';
 
-const base = 'http://localhost:8080/api/v1/blog';
+const base = 'http://35.237.145.76:8080/api/v1/blog';
 
 export const add = blog => dispatch => axios.post(`${base}/add`, {blog}).then( response =>{
 	dispatch({
