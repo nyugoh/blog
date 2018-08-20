@@ -4,27 +4,23 @@ import { connect } from 'react-redux';
 import { edit } from '../actions/blog';
 
 class EditBlog extends Component {
+	constructor(props) {
+		super(props);
+		this.state = { ...props.blog };
+	};
 	
 	edit = () =>{
 		this.props.edit(this.state);
 		this.setState({});
 	};
 
-	componentDidMount() {
-		// this.state = this.props.blog;
-	}
-
 	handleChange = e => { this.setState({ ...this.state, [e.target.name]: e.target.value }); };
 
 	handleSelect = (e, data) => { this.setState({ ...this.state.data, [data.name]: data.value }); };
 
 	render() {
-		const { categories, id, post } = this.props;
-		let blog = {};
-		if (post){
-			this.state = {...post};
-			blog = this.state;
-		}
+		const { categories } = this.props;
+		const blog = this.state;
 		const options = [ ...categories.map( category => ( { text: category.name, value: category.name }))];
 		return (
 			<div>
@@ -91,8 +87,7 @@ class EditBlog extends Component {
 }
 
 const mapStateToProps = state => ({
-	categories: state.categories,
-	posts: state.posts
+	categories: state.categories
 });
 
 export default connect(mapStateToProps, { edit })(EditBlog);

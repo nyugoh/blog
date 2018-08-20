@@ -1,13 +1,14 @@
 import React, {Component} from 'react';
-import { Table, Icon, Label } from 'semantic-ui-react';
+import { Table, Icon, Label, Modal } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 import ConfirmDelete from "../forms/DeleteConfirm";
 import moment from "moment/moment";
+import EditBlog from '../forms/EditBlog';
 
 class BlogsList extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = { };
 	};
 
 	render() {
@@ -19,6 +20,7 @@ class BlogsList extends Component {
 						<Table.HeaderCell>Blog</Table.HeaderCell>
 						<Table.HeaderCell>Last update</Table.HeaderCell>
 						<Table.HeaderCell>Publish date</Table.HeaderCell>
+						<Table.HeaderCell>Write</Table.HeaderCell>
 						<Table.HeaderCell>Edit</Table.HeaderCell>
 						<Table.HeaderCell>Archive</Table.HeaderCell>
 						<Table.HeaderCell>Delete</Table.HeaderCell>
@@ -43,6 +45,22 @@ class BlogsList extends Component {
 										color={'green'}
 										name={'pencil'}/>
 								</Link>
+							</Table.Cell>
+							<Table.Cell>
+								<Modal
+									size={'tiny'}
+									trigger={<Icon
+										inverted={true}
+										style={{float:'left', cursor: 'pointer'}}
+										color={'green'}
+										name={'pencil'}/>}>
+									<Modal.Header>Edit a blog</Modal.Header>
+									<Modal.Content>
+										<EditBlog
+											blog={blog}
+											edit={this.props.edit.bind(this)}/>
+									</Modal.Content>
+								</Modal>
 							</Table.Cell>
 							<Table.Cell>
 								<Icon

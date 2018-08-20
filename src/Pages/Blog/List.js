@@ -1,9 +1,18 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import BlogTable from '../../Tables/BlogList';
-import { remove, archive } from '../../actions/blog';
+import { edit, remove, archive } from '../../actions/blog';
 
 class BlogList extends Component {
+
+	edit = (data) =>{
+		this.props.edit(data).then( () =>{
+			// TODO: Close modal
+			// this.setState({open: false});
+		}).catch( error =>{
+			alert(error.message);
+		});
+	};
 	
 	archive = (id) =>{
 		this.props.archive(id).then( () =>{
@@ -37,4 +46,4 @@ const mapStateToProps = state => ({
 	blogs: state.blogs
 });
 
-export default connect(mapStateToProps, { remove, archive })(BlogList);
+export default connect(mapStateToProps, { edit, remove, archive })(BlogList);
